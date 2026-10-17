@@ -46,3 +46,13 @@ Kolom:
 - `tahun_terbit`
 - `kategori`
 - `stok`
+
+## Pengujian
+
+Pengujian aplikasi dilakukan untuk memastikan fitur utama berjalan:
+- Menampilkan daftar buku.
+- Menambahkan data buku.
+- Mengedit data buku.
+- Menghapus data buku.
+- Menolak penyimpanan jika kolom wajib belum diisi.
+- Menampilkan pesan setelah data berhasil ditambah, diperbarui, atau dihapus.
