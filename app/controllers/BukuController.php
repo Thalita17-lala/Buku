@@ -1,6 +1,8 @@
 
 <?php
 
+session_start();
+
 require_once __DIR__ . '/../models/Buku.php';
 
 class BukuController
@@ -38,8 +40,9 @@ if (!$berhasil) {
     die('Data buku gagal disimpan.');
 }
 
-    header('Location: index.php');
-    exit;
+   $_SESSION['pesan'] = 'Data buku berhasil disimpan.';
+header('Location: index.php');
+exit;
 }
 
 public function edit(): void
@@ -70,8 +73,9 @@ public function update(): void
         die('Data buku gagal diperbarui.');
     }
 
-    header('Location: index.php');
-    exit;
+     $_SESSION['pesan'] = 'Data buku berhasil diperbarui.';
+   header('Location: index.php');
+   exit;
 }
 
 public function delete(): void
@@ -88,8 +92,9 @@ public function delete(): void
         die('Data buku gagal dihapus.');
     }
 
-    header('Location: index.php');
-    exit;
+   $_SESSION['pesan'] = 'Data buku berhasil dihapus.';
+header('Location: index.php');
+exit;
 }
 
 }

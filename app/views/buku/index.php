@@ -8,6 +8,12 @@
 <body>
     <h1>Daftar Buku</h1>
 
+    <?php if (isset($_SESSION['pesan'])): ?>
+    <p><?= htmlspecialchars($_SESSION['pesan']) ?></p>
+    <?php unset($_SESSION['pesan']); ?>
+    
+<?php endif; ?>
+
     <table border="1" cellpadding="8">
         <thead>
             <tr>
@@ -39,5 +45,6 @@
             <?php endforeach; ?>
         </tbody>
     </table>
+    <p><a href="index.php?aksi=tambah">Tambah Buku</a></p>
 </body>
 </html>
